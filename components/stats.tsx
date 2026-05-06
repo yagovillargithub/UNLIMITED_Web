@@ -1,0 +1,24 @@
+const STATS = [
+  { num: "14", suffix: "+", suffixClass: "text-accent", label: "proyectos en producción" },
+  { num: "4",  suffix: "/sem", suffixClass: "text-faint", label: "de discovery a prototipo" },
+  { num: "€0", suffix: "",  suffixClass: "",            label: "propuestas — siempre gratis" },
+  { num: "100", suffix: "%", suffixClass: "text-accent", label: "código entregado al cliente" },
+];
+
+export function Stats() {
+  return (
+    <section className="stats" data-screen-label="05 Stats">
+      <div className="wrap stats-grid">
+        {STATS.map((s, i) => (
+          <div key={i} className="stat" data-reveal data-reveal-delay={i || undefined}>
+            <div className="stat-num">
+              {s.num}
+              {s.suffix && <span className={s.suffixClass}>{s.suffix}</span>}
+            </div>
+            <div className="stat-lbl mono">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

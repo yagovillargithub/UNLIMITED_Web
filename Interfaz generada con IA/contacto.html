@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contacto — UNLIMITED</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="contacto.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">UNLIMITED<span>.</span></a>
+  <ul>
+    <li><a href="index.html" data-page="index">Inicio</a></li>
+    <li><a href="servicios.html" data-page="servicios">Servicios</a></li>
+    <li><a href="index.html#proceso">Proceso</a></li>
+    <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Hablemos →</a>
+</nav>
+
+<section class="ct-hero" data-screen-label="01 Contacto Hero">
+  <div class="wrap ct-grid">
+    <div class="ct-left">
+      <span class="num" data-reveal>Contacto</span>
+      <h1 class="display ct-h" data-reveal data-reveal-delay="1">
+        Cuéntenos<br /><em>en qué piensa.</em>
+      </h1>
+      <p class="lede" data-reveal data-reveal-delay="2" style="margin-top:var(--s-3)">
+        Respondemos en menos de 24h laborables. Si prefiere algo más rápido,
+        Whatsapp directo abajo a la derecha.
+      </p>
+
+      <div class="ct-info" data-reveal data-reveal-delay="3">
+        <div class="ct-info-row">
+          <span class="mono text-faint">Email</span>
+          <a href="mailto:hola@unlimited.systems">hola@unlimited.systems</a>
+        </div>
+        <div class="ct-info-row">
+          <span class="mono text-faint">Whatsapp</span>
+          <a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 00 00 00</a>
+        </div>
+        <div class="ct-info-row">
+          <span class="mono text-faint">Oficina</span>
+          <span>Calle de Velázquez, Madrid</span>
+        </div>
+        <div class="ct-info-row">
+          <span class="mono text-faint">Horario</span>
+          <span>Lun–Vie · 09:00–19:00 CET</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form class="ct-form" id="ctForm" novalidate data-reveal data-reveal-delay="2">
+      <div class="ct-progress">
+        <div class="ct-progress-bar" id="ctProgressBar"></div>
+        <div class="ct-progress-label mono"><span id="ctProgressN">0</span><span class="text-faint"> / 5 completos</span></div>
+      </div>
+
+      <div class="ct-field">
+        <label for="ctName"><span class="mono">01</span> ¿Cómo se llama?</label>
+        <input id="ctName" name="name" type="text" autocomplete="name" required />
+        <span class="ct-err" data-for="ctName"></span>
+      </div>
+
+      <div class="ct-field">
+        <label for="ctEmail"><span class="mono">02</span> Su email de trabajo</label>
+        <input id="ctEmail" name="email" type="email" autocomplete="email" required />
+        <span class="ct-err" data-for="ctEmail"></span>
+      </div>
+
+      <div class="ct-field">
+        <label for="ctCompany"><span class="mono">03</span> Empresa</label>
+        <input id="ctCompany" name="company" type="text" autocomplete="organization" required />
+        <span class="ct-err" data-for="ctCompany"></span>
+      </div>
+
+      <div class="ct-field">
+        <label><span class="mono">04</span> ¿Qué le interesa más?</label>
+        <div class="ct-chips" data-multi>
+          <button type="button" class="ct-chip" data-val="Auditoría de IA">Auditoría</button>
+          <button type="button" class="ct-chip" data-val="Agentes autónomos">Agentes</button>
+          <button type="button" class="ct-chip" data-val="RAG">RAG</button>
+          <button type="button" class="ct-chip" data-val="Automatización">Automatización</button>
+          <button type="button" class="ct-chip" data-val="Copilot vertical">Copilot</button>
+          <button type="button" class="ct-chip" data-val="Visión por computador">Visión</button>
+          <button type="button" class="ct-chip" data-val="No estoy seguro">No estoy seguro</button>
+        </div>
+        <input type="hidden" id="ctInterest" name="interest" />
+        <span class="ct-err" data-for="ctInterest"></span>
+      </div>
+
+      <div class="ct-field">
+        <label for="ctMessage"><span class="mono">05</span> Cuéntenos un poco más</label>
+        <textarea id="ctMessage" name="message" rows="5" required placeholder="Procesos que le quitan tiempo, datos que tiene sin usar, ideas a medio cocinar..."></textarea>
+        <span class="ct-err" data-for="ctMessage"></span>
+        <span class="ct-count mono"><span id="ctCount">0</span> / 1.000 caracteres</span>
+      </div>
+
+      <div class="ct-field ct-field--radio">
+        <label><span class="mono">06</span> ¿Presupuesto orientativo?</label>
+        <div class="ct-chips" data-radio>
+          <button type="button" class="ct-chip" data-val="<10k">&lt; €10k</button>
+          <button type="button" class="ct-chip" data-val="10-30k">€10k–30k</button>
+          <button type="button" class="ct-chip" data-val="30-80k">€30k–80k</button>
+          <button type="button" class="ct-chip" data-val=">80k">&gt; €80k</button>
+          <button type="button" class="ct-chip" data-val="No definido">No definido</button>
+        </div>
+        <input type="hidden" id="ctBudget" name="budget" />
+      </div>
+
+      <div class="ct-actions">
+        <button type="submit" class="btn btn--accent" id="ctSubmit">
+          Enviar mensaje <span class="arrow">→</span>
+        </button>
+        <a href="https://wa.me/34600000000" target="_blank" rel="noopener" class="btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-2px"><path d="M17.6 6.3a8 8 0 0 0-12.6 9.6L4 20l4.2-1.1a8 8 0 0 0 11.5-7.1 8 8 0 0 0-2.1-5.5Zm-5.6 12.3a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.7.7-2.4-.2-.3a6.6 6.6 0 1 1 5.6 3Zm3.6-5c-.2-.1-1.2-.6-1.4-.6-.2-.1-.3-.1-.4.1l-.6.7c-.1.1-.2.2-.4.1a5.4 5.4 0 0 1-1.6-1 6 6 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.1 0-.2 0-.3l-.6-1.4c-.2-.4-.3-.3-.5-.3h-.3a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5c0 .9.6 1.7.7 1.8.1.2 1.3 2 3.2 2.7l1 .4a3 3 0 0 0 1.4-.1c.4-.1 1.2-.5 1.4-1l.1-.9c0-.1-.1-.2-.3-.2Z"/></svg>
+          Whatsapp
+        </a>
+      </div>
+
+      <p class="mono text-faint small ct-disclaimer">
+        Al enviar acepta nuestra <a href="#" style="text-decoration:underline">política de privacidad</a>. No spam, lo prometemos.
+      </p>
+    </form>
+
+    <!-- Success state -->
+    <div class="ct-success" id="ctSuccess" hidden>
+      <div class="ct-success-mark">
+        <svg viewBox="0 0 60 60" width="60" height="60"><circle cx="30" cy="30" r="29" fill="none" stroke="currentColor" stroke-width="1"/><path d="M18 31 l8 8 16-18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </div>
+      <h2 class="display" style="font-size:clamp(40px,5vw,72px); margin:24px 0 12px">Mensaje enviado.</h2>
+      <p class="lede">Hemos recibido su consulta. Le respondemos en menos de 24h laborables — normalmente antes.</p>
+      <p class="mono text-faint small" style="margin-top:24px">Ref: <span id="ctRef"></span></p>
+      <a href="index.html" class="btn" style="margin-top:32px">← Volver al inicio</a>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp floating -->
+<a href="https://wa.me/34600000000" target="_blank" rel="noopener" class="wa-float" aria-label="Whatsapp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3a8 8 0 0 0-12.6 9.6L4 20l4.2-1.1a8 8 0 0 0 11.5-7.1 8 8 0 0 0-2.1-5.5Zm-5.6 12.3a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.7.7-2.4-.2-.3a6.6 6.6 0 1 1 5.6 3Zm3.6-5c-.2-.1-1.2-.6-1.4-.6-.2-.1-.3-.1-.4.1l-.6.7c-.1.1-.2.2-.4.1a5.4 5.4 0 0 1-1.6-1 6 6 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.1 0-.2 0-.3l-.6-1.4c-.2-.4-.3-.3-.5-.3h-.3a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5c0 .9.6 1.7.7 1.8.1.2 1.3 2 3.2 2.7l1 .4a3 3 0 0 0 1.4-.1c.4-.1 1.2-.5 1.4-1l.1-.9c0-.1-.1-.2-.3-.2Z"/></svg>
+  <span class="mono">Whatsapp</span>
+</a>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div><h4>UNLIMITED</h4><p class="text-faint" style="max-width:32ch">Consultora de sistemas e integración de IA. Madrid + remoto, equipo distribuido en EU.</p></div>
+      <div><h4>Web</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="mailto:hola@unlimited.systems">hola@unlimited.systems</a></li><li><a href="https://wa.me/34600000000">+34 600 00 00 00</a></li><li>Madrid · ES</li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Aviso legal</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-big" aria-hidden="true">UNLIMITED.</div>
+    <div class="footer-bottom"><span>© 2026 UNLIMITED Systems S.L.</span><span>Hecho con cabeza, no con prompts.</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="contacto.js"></script>
+
+</body>
+</html>

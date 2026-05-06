@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>UNLIMITED — Consultoría de IA & sistemas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- ─── Nav ─── -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">UNLIMITED<span>.</span></a>
+  <ul>
+    <li><a href="index.html" data-page="index">Inicio</a></li>
+    <li><a href="servicios.html" data-page="servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Hablemos →</a>
+</nav>
+
+<!-- ─── Hero ─── -->
+<section id="hero" class="hero" data-screen-label="01 Hero">
+  <div class="wrap hero-grid">
+    <div class="hero-meta">
+      <span class="mono text-faint">UNL / 2026 · Madrid — Remoto</span>
+      <span class="mono text-faint hero-status"><span class="dot-live"></span> Aceptando 3 proyectos en Q3</span>
+    </div>
+
+    <h1 class="display hero-h" data-reveal="char">
+      Sistemas que piensan<br />
+      <em>contigo.</em>
+    </h1>
+
+    <div class="hero-side" data-reveal data-reveal-delay="2">
+      <p class="lede">
+        Somos UNLIMITED. Diseñamos, integramos y desplegamos
+        inteligencia artificial dentro de empresas reales — no demos.
+        Cercanos, claros, con código que funciona el lunes por la mañana.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn--accent" href="contacto.html">
+          Empezar un proyecto <span class="arrow">→</span>
+        </a>
+        <a class="btn" href="servicios.html">Ver servicios</a>
+      </div>
+    </div>
+
+    <!-- decorative ASCII / orbital placeholder -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orbit">
+        <div class="orbit-ring r1"></div>
+        <div class="orbit-ring r2"></div>
+        <div class="orbit-ring r3"></div>
+        <div class="orbit-core"></div>
+        <div class="orbit-node n1"><span class="mono">LLM</span></div>
+        <div class="orbit-node n2"><span class="mono">RAG</span></div>
+        <div class="orbit-node n3"><span class="mono">API</span></div>
+        <div class="orbit-node n4"><span class="mono">DATA</span></div>
+        <div class="orbit-node n5"><span class="mono">UX</span></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll mono text-faint">
+      <span>Desplázate</span>
+      <span class="hero-scroll-line"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Manifesto / intro ─── -->
+<section id="manifesto" data-screen-label="02 Manifesto">
+  <div class="wrap manifesto">
+    <span class="num" data-reveal>01 — Manifiesto</span>
+    <h2 class="section-h" data-reveal data-reveal-delay="1">
+      La IA no es magia.<br />
+      <em class="text-sage">Es ingeniería bien hecha.</em>
+    </h2>
+    <div class="manifesto-grid" data-reveal data-reveal-delay="2">
+      <p class="lede">
+        Llevamos años integrando sistemas. La IA generativa cambió las herramientas,
+        no los principios: entender el negocio, mapear los datos, escribir código que
+        no se rompe.
+      </p>
+      <p class="lede">
+        Trabajamos cerca. Sin agencias intermediarias, sin presentaciones de 80 slides,
+        sin <span class="italic text-sage">"vendor lock-in"</span>. Te enseñamos cómo
+        funciona para que tu equipo lo mantenga.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Marquee ─── -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>Agentes autónomos</span><span class="dot"></span>
+    <span>RAG sobre datos internos</span><span class="dot"></span>
+    <span>Copilots verticales</span><span class="dot"></span>
+    <span>Automatización de procesos</span><span class="dot"></span>
+    <span>Pipelines de datos</span><span class="dot"></span>
+    <span>Visión por computador</span><span class="dot"></span>
+    <span>Integración a medida</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- ─── Servicios — sticky scroll ─── -->
+<section id="servicios" class="services" data-screen-label="03 Servicios">
+  <div class="wrap services-head">
+    <span class="num" data-reveal>02 — Servicios</span>
+    <h2 class="section-h" data-reveal data-reveal-delay="1">
+      Cuatro formas de <em>poner IA</em><br />a trabajar en su empresa.
+    </h2>
+  </div>
+
+  <div class="wrap services-sticky">
+    <div class="services-list" id="servicesList">
+      <article class="srv" data-srv="0">
+        <div class="srv-num">01.</div>
+        <h3 class="srv-h">Agentes autónomos a medida</h3>
+        <p class="srv-p">Asistentes que ejecutan tareas reales en sus sistemas: leen correos, actualizan CRMs, generan informes, contestan tickets. Construidos sobre LangGraph, OpenAI y Anthropic.</p>
+        <ul class="srv-tags"><li>LangGraph</li><li>Tool use</li><li>Memoria persistente</li></ul>
+      </article>
+      <article class="srv" data-srv="1">
+        <div class="srv-num">02.</div>
+        <h3 class="srv-h">RAG sobre conocimiento interno</h3>
+        <p class="srv-p">Convertimos sus documentos, manuales y bases de datos en un chat que responde con fuentes citadas. Pinecone, Weaviate o pgvector según el caso.</p>
+        <ul class="srv-tags"><li>Embeddings</li><li>Hybrid search</li><li>Citations</li></ul>
+      </article>
+      <article class="srv" data-srv="2">
+        <div class="srv-num">03.</div>
+        <h3 class="srv-h">Automatización de procesos</h3>
+        <p class="srv-p">Identificamos los flujos repetitivos y los reemplazamos por pipelines con IA: clasificación de documentos, extracción de datos, validación, ruteo.</p>
+        <ul class="srv-tags"><li>n8n / Temporal</li><li>OCR + LLM</li><li>Webhooks</li></ul>
+      </article>
+      <article class="srv" data-srv="3">
+        <div class="srv-num">04.</div>
+        <h3 class="srv-h">Copilots verticales</h3>
+        <p class="srv-p">Productos internos para equipos concretos — comercial, legal, soporte. Integrados con sus herramientas, con su lenguaje, con sus permisos.</p>
+        <ul class="srv-tags"><li>Auth + RBAC</li><li>Streaming UI</li><li>Evaluation</li></ul>
+      </article>
+    </div>
+
+    <aside class="services-side">
+      <div class="srv-card srv-card--0 active" data-card="0">
+        <div class="srv-card-frame">
+          <div class="ag-window">
+            <div class="ag-bar"><span></span><span></span><span></span><b class="mono">agent.run()</b></div>
+            <div class="ag-body">
+              <div class="ag-line mono"><span class="text-accent">›</span> recibo email · cliente@empresa.com</div>
+              <div class="ag-line mono">→ extraigo intención · "factura agosto"</div>
+              <div class="ag-line mono">→ consulto ERP · invoice_id: 4421</div>
+              <div class="ag-line mono">→ genero PDF + envío respuesta</div>
+              <div class="ag-line mono text-sage">✓ resuelto · 12s · sin humano</div>
+            </div>
+          </div>
+        </div>
+        <div class="srv-card-meta mono">[01] Agente / Producción · 3.2k tareas/día</div>
+      </div>
+
+      <div class="srv-card srv-card--1" data-card="1">
+        <div class="srv-card-frame">
+          <div class="rag-search">
+            <div class="rag-input mono">¿cuál es la política de devoluciones B2B?</div>
+            <div class="rag-result">
+              <div class="rag-line">Las devoluciones B2B se aceptan dentro de 30 días desde la factura, sujeto a estado del producto.</div>
+              <div class="rag-cites mono">
+                <span>política-comercial.pdf · p.14</span>
+                <span>contrato-marco.docx · §4.2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="srv-card-meta mono">[02] RAG / 12k docs indexados</div>
+      </div>
+
+      <div class="srv-card srv-card--2" data-card="2">
+        <div class="srv-card-frame">
+          <div class="flow">
+            <div class="flow-step"><b class="mono">01</b><span>Email entrante</span></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step"><b class="mono">02</b><span>Clasificar</span></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step"><b class="mono">03</b><span>Extraer</span></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step active"><b class="mono">04</b><span>Validar</span></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step"><b class="mono">05</b><span>Routear</span></div>
+          </div>
+        </div>
+        <div class="srv-card-meta mono">[03] Pipeline / 99.2% precisión</div>
+      </div>
+
+      <div class="srv-card srv-card--3" data-card="3">
+        <div class="srv-card-frame">
+          <div class="copilot">
+            <div class="cop-side">
+              <div class="cop-item active">Pipeline Q3</div>
+              <div class="cop-item">Cuentas top</div>
+              <div class="cop-item">Forecast</div>
+              <div class="cop-item">Coaching</div>
+            </div>
+            <div class="cop-main">
+              <div class="cop-h mono">copilot · comercial</div>
+              <div class="cop-msg">Resumen de las 5 oportunidades en negociación esta semana, con probabilidad y siguiente paso recomendado.</div>
+              <div class="cop-bar"><div class="cop-bar-fill"></div></div>
+              <div class="cop-msg small text-faint">3 deals en riesgo — clic para ver acciones</div>
+            </div>
+          </div>
+        </div>
+        <div class="srv-card-meta mono">[04] Copilot / Equipo comercial · 24 usuarios</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ─── Proceso — tabs ─── -->
+<section id="proceso" class="process" data-screen-label="04 Proceso">
+  <div class="wrap">
+    <span class="num" data-reveal>03 — Proceso</span>
+    <h2 class="section-h" data-reveal data-reveal-delay="1">
+      Cuatro semanas para <em>ver algo</em><br />funcionando.
+    </h2>
+
+    <div class="process-tabs" id="processTabs">
+      <button class="process-tab active" data-tab="0"><span class="mono">w1</span> Discovery</button>
+      <button class="process-tab" data-tab="1"><span class="mono">w2</span> Prototipo</button>
+      <button class="process-tab" data-tab="2"><span class="mono">w3</span> Integración</button>
+      <button class="process-tab" data-tab="3"><span class="mono">w4</span> Despliegue</button>
+      <button class="process-tab" data-tab="4"><span class="mono">∞</span> Mantenimiento</button>
+    </div>
+
+    <div class="process-content">
+      <div class="process-panel active" data-panel="0">
+        <div class="process-panel-l">
+          <h3>Entendemos su negocio antes de tocar código.</h3>
+          <p class="lede">Sentamos a su equipo durante una semana. Mapeamos procesos, identificamos cuellos de botella, separamos lo que merece IA de lo que solo necesita un buen script. Salimos con un documento de scope claro y un precio cerrado.</p>
+        </div>
+        <div class="process-panel-r mono">
+          <div class="pp-row"><span class="text-faint">duración</span><span>5 días laborables</span></div>
+          <div class="pp-row"><span class="text-faint">entregable</span><span>scope.md + estimate</span></div>
+          <div class="pp-row"><span class="text-faint">su tiempo</span><span>~6 horas en total</span></div>
+          <div class="pp-row"><span class="text-faint">precio</span><span class="text-accent">€0 — al firmar</span></div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="1">
+        <div class="process-panel-l">
+          <h3>Prototipo navegable en su entorno.</h3>
+          <p class="lede">A los 7-10 días tiene un prototipo funcional con sus datos reales (anonimizados si conviene). No vendemos PowerPoints — vendemos algo en lo que se puede hacer clic, romper y validar internamente.</p>
+        </div>
+        <div class="process-panel-r mono">
+          <div class="pp-row"><span class="text-faint">duración</span><span>7-10 días</span></div>
+          <div class="pp-row"><span class="text-faint">entregable</span><span>app desplegada · staging</span></div>
+          <div class="pp-row"><span class="text-faint">stack</span><span>según caso</span></div>
+          <div class="pp-row"><span class="text-faint">demos</span><span>2 sesiones internas</span></div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="2">
+        <div class="process-panel-l">
+          <h3>Conectamos a sus sistemas reales.</h3>
+          <p class="lede">CRMs, ERPs, bases de datos, APIs internas, Outlook, Google Workspace. Trabajamos con sus equipos de IT, respetamos sus políticas de seguridad y dejamos auditoría completa de cada llamada al modelo.</p>
+        </div>
+        <div class="process-panel-r mono">
+          <div class="pp-row"><span class="text-faint">integraciones</span><span>SAP · Salesforce · Hubspot · custom</span></div>
+          <div class="pp-row"><span class="text-faint">seguridad</span><span>SSO · audit logs · PII filter</span></div>
+          <div class="pp-row"><span class="text-faint">testing</span><span>evals automatizadas</span></div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="3">
+        <div class="process-panel-l">
+          <h3>Producción + formación a su equipo.</h3>
+          <p class="lede">Desplegamos en su infraestructura o en la nuestra. Documentamos cada decisión. Formamos a 2-4 personas de su equipo para que lo entiendan a fondo. No queremos ser imprescindibles.</p>
+        </div>
+        <div class="process-panel-r mono">
+          <div class="pp-row"><span class="text-faint">deploy</span><span>AWS · Azure · GCP · on-prem</span></div>
+          <div class="pp-row"><span class="text-faint">docs</span><span>arquitectura + runbooks</span></div>
+          <div class="pp-row"><span class="text-faint">formación</span><span>2 talleres · 4h cada uno</span></div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="4">
+        <div class="process-panel-l">
+          <h3>Soporte continuo, sin sorpresas.</h3>
+          <p class="lede">Un retainer mensual mínimo cubre monitorización, actualizaciones de modelos y ajustes de prompts. Los modelos evolucionan rápido — un copilot de hace 8 meses ya está obsoleto. Estamos para que el suyo no lo esté.</p>
+        </div>
+        <div class="process-panel-r mono">
+          <div class="pp-row"><span class="text-faint">SLA</span><span>4h respuesta · 24h fix</span></div>
+          <div class="pp-row"><span class="text-faint">monitoring</span><span>latency · costo · drift</span></div>
+          <div class="pp-row"><span class="text-faint">retainer</span><span class="text-accent">desde €1.800/mes</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Stats ─── -->
+<section class="stats" data-screen-label="05 Stats">
+  <div class="wrap stats-grid">
+    <div class="stat" data-reveal>
+      <div class="stat-num">14<span class="text-accent">+</span></div>
+      <div class="stat-lbl mono">proyectos en producción</div>
+    </div>
+    <div class="stat" data-reveal data-reveal-delay="1">
+      <div class="stat-num">4<span class="text-faint">/sem</span></div>
+      <div class="stat-lbl mono">de discovery a prototipo</div>
+    </div>
+    <div class="stat" data-reveal data-reveal-delay="2">
+      <div class="stat-num">€0</div>
+      <div class="stat-lbl mono">propuestas — siempre gratis</div>
+    </div>
+    <div class="stat" data-reveal data-reveal-delay="3">
+      <div class="stat-num">100<span class="text-accent">%</span></div>
+      <div class="stat-lbl mono">código entregado al cliente</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA grande ─── -->
+<section class="bigcta" data-screen-label="06 CTA">
+  <div class="wrap">
+    <span class="num" data-reveal>04 — Hablemos</span>
+    <h2 class="display bigcta-h" data-reveal data-reveal-delay="1">
+      ¿Tiene un proceso<br />que podría<br />
+      <em>pensar solo?</em>
+    </h2>
+    <div class="bigcta-row" data-reveal data-reveal-delay="2">
+      <a class="btn btn--accent" href="contacto.html">Enviar mensaje <span class="arrow">→</span></a>
+      <a class="btn" href="https://wa.me/34600000000?text=Hola%20UNLIMITED" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-2px"><path d="M17.6 6.3a8 8 0 0 0-12.6 9.6L4 20l4.2-1.1a8 8 0 0 0 11.5-7.1 8 8 0 0 0-2.1-5.5Zm-5.6 12.3a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.7.7-2.4-.2-.3a6.6 6.6 0 1 1 5.6 3Zm3.6-5c-.2-.1-1.2-.6-1.4-.6-.2-.1-.3-.1-.4.1l-.6.7c-.1.1-.2.2-.4.1a5.4 5.4 0 0 1-1.6-1 6 6 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.1 0-.2 0-.3l-.6-1.4c-.2-.4-.3-.3-.5-.3h-.3a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5c0 .9.6 1.7.7 1.8.1.2 1.3 2 3.2 2.7l1 .4a3 3 0 0 0 1.4-.1c.4-.1 1.2-.5 1.4-1l.1-.9c0-.1-.1-.2-.3-.2Z"/></svg>
+        Whatsapp directo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>UNLIMITED</h4>
+        <p class="text-faint" style="max-width:32ch">Consultora de sistemas e integración de IA. Madrid + remoto, equipo distribuido en EU.</p>
+      </div>
+      <div>
+        <h4>Web</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:hola@unlimited.systems">hola@unlimited.systems</a></li>
+          <li><a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 00 00 00</a></li>
+          <li>Madrid · ES</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-big" aria-hidden="true">UNLIMITED.</div>
+    <div class="footer-bottom">
+      <span>© 2026 UNLIMITED Systems S.L.</span>
+      <span>Hecho con cabeza, no con prompts.</span>
+    </div>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="landing.css" />
+<script src="app.js"></script>
+<script src="landing.js"></script>
+
+<!-- ─── Tweaks panel ─── -->
+<div id="tweaks-root"></div>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>

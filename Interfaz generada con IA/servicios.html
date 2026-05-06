@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Servicios — UNLIMITED</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="servicios.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">UNLIMITED<span>.</span></a>
+  <ul>
+    <li><a href="index.html" data-page="index">Inicio</a></li>
+    <li><a href="servicios.html" data-page="servicios">Servicios</a></li>
+    <li><a href="index.html#proceso">Proceso</a></li>
+    <li><a href="contacto.html" data-page="contacto">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Hablemos →</a>
+</nav>
+
+<!-- Hero servicios -->
+<section class="srv-hero" data-screen-label="01 Servicios Hero">
+  <div class="wrap">
+    <span class="num" data-reveal>Servicios — 8 ofertas</span>
+    <h1 class="display srv-hero-h" data-reveal data-reveal-delay="1">
+      Catálogo abierto.<br />
+      <em>Precios cerrados.</em>
+    </h1>
+    <p class="lede" data-reveal data-reveal-delay="2" style="margin-top:var(--s-4); max-width:60ch">
+      Estos son los servicios que más nos pide la gente. Si no encaja exactamente con lo suyo,
+      escríbanos — la mayoría de proyectos buenos empiezan con un "¿podríais...?".
+    </p>
+  </div>
+</section>
+
+<!-- Listado servicios — interactive list -->
+<section class="srv-list-section">
+  <div class="wrap">
+    <div class="srv-listing" id="srvListing">
+      <article class="srv-row" data-srv="0">
+        <div class="srv-row-num mono">S/01</div>
+        <div class="srv-row-title">Auditoría de IA</div>
+        <div class="srv-row-tags mono"><span>1 sem</span><span>fixed</span></div>
+        <div class="srv-row-price mono">€2.400</div>
+      </article>
+      <article class="srv-row" data-srv="1">
+        <div class="srv-row-num mono">S/02</div>
+        <div class="srv-row-title">Agentes autónomos</div>
+        <div class="srv-row-tags mono"><span>4-8 sem</span><span>scope</span></div>
+        <div class="srv-row-price mono">desde €18k</div>
+      </article>
+      <article class="srv-row" data-srv="2">
+        <div class="srv-row-num mono">S/03</div>
+        <div class="srv-row-title">RAG sobre conocimiento interno</div>
+        <div class="srv-row-tags mono"><span>3-6 sem</span><span>fixed</span></div>
+        <div class="srv-row-price mono">desde €14k</div>
+      </article>
+      <article class="srv-row" data-srv="3">
+        <div class="srv-row-num mono">S/04</div>
+        <div class="srv-row-title">Automatización de procesos</div>
+        <div class="srv-row-tags mono"><span>2-5 sem</span><span>scope</span></div>
+        <div class="srv-row-price mono">desde €9k</div>
+      </article>
+      <article class="srv-row" data-srv="4">
+        <div class="srv-row-num mono">S/05</div>
+        <div class="srv-row-title">Copilots verticales</div>
+        <div class="srv-row-tags mono"><span>6-12 sem</span><span>scope</span></div>
+        <div class="srv-row-price mono">desde €28k</div>
+      </article>
+      <article class="srv-row" data-srv="5">
+        <div class="srv-row-num mono">S/06</div>
+        <div class="srv-row-title">Integración LLM en producto</div>
+        <div class="srv-row-tags mono"><span>variable</span><span>T&amp;M</span></div>
+        <div class="srv-row-price mono">€95/h</div>
+      </article>
+      <article class="srv-row" data-srv="6">
+        <div class="srv-row-num mono">S/07</div>
+        <div class="srv-row-title">Visión por computador</div>
+        <div class="srv-row-tags mono"><span>4-10 sem</span><span>scope</span></div>
+        <div class="srv-row-price mono">desde €16k</div>
+      </article>
+      <article class="srv-row" data-srv="7">
+        <div class="srv-row-num mono">S/08</div>
+        <div class="srv-row-title">Mantenimiento &amp; evolución</div>
+        <div class="srv-row-tags mono"><span>retainer</span><span>mensual</span></div>
+        <div class="srv-row-price mono">desde €1.800/m</div>
+      </article>
+    </div>
+
+    <!-- Detail panel — pinned right -->
+    <aside class="srv-detail" id="srvDetail">
+      <div class="srv-detail-card" data-detail="0">
+        <span class="mono text-faint">S/01 · 1 semana · €2.400</span>
+        <h3>Auditoría de IA</h3>
+        <p>Una semana, su equipo y nosotros. Mapeamos todos los procesos donde la IA tendría sentido (y donde no). Salimos con un informe priorizado: qué hacer primero, qué ahorra más, qué riesgos hay.</p>
+        <div class="sd-block">
+          <h4 class="mono">Incluye</h4>
+          <ul>
+            <li>3 sesiones con stakeholders clave</li>
+            <li>Análisis de stack tecnológico actual</li>
+            <li>Informe de oportunidades priorizado</li>
+            <li>Estimación de ROI por iniciativa</li>
+            <li>Plan de implementación a 6 meses</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4 class="mono">Ejemplo</h4>
+          <p class="text-faint small">Una aseguradora identificó 4 procesos de back-office reemplazables por agentes — ahorro estimado: 1.200h/mes.</p>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="1">
+        <span class="mono text-faint">S/02 · 4-8 semanas · desde €18.000</span>
+        <h3>Agentes autónomos a medida</h3>
+        <p>Asistentes que no solo responden — actúan. Se conectan a sus sistemas, ejecutan tareas, deciden cuándo escalar a un humano. Construidos para auditarse y debuggearse.</p>
+        <div class="sd-block">
+          <h4 class="mono">Stack típico</h4>
+          <ul>
+            <li>LangGraph / CrewAI para orquestación</li>
+            <li>Anthropic Claude o OpenAI GPT-4</li>
+            <li>Postgres + pgvector para memoria</li>
+            <li>OpenTelemetry + LangSmith para trazas</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4 class="mono">Ejemplo</h4>
+          <p class="text-faint small">Agente que gestiona el inbox de soporte L1 de una fintech — 3.200 tickets/mes resueltos sin intervención humana, con escalado claro de los casos sensibles.</p>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="2">
+        <span class="mono text-faint">S/03 · 3-6 semanas · desde €14.000</span>
+        <h3>RAG sobre conocimiento interno</h3>
+        <p>Convertimos sus PDFs, manuales, contratos, wikis y bases de datos en un chat que responde con fuentes citadas. Evaluable, mejorable, no-alucina-y-si-lo-hace-se-detecta.</p>
+        <div class="sd-block">
+          <h4 class="mono">Incluye</h4>
+          <ul>
+            <li>Pipeline de ingesta multi-formato</li>
+            <li>Embeddings + reranking híbrido</li>
+            <li>UI con citaciones en línea</li>
+            <li>Evals automatizadas (precision/recall)</li>
+            <li>Dashboard de calidad de respuestas</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4 class="mono">Ejemplo</h4>
+          <p class="text-faint small">12.000 documentos de un despacho legal indexados — los abogados encuentran precedentes en 8s en vez de en 40min.</p>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="3">
+        <span class="mono text-faint">S/04 · 2-5 semanas · desde €9.000</span>
+        <h3>Automatización de procesos</h3>
+        <p>Esos flujos donde alguien copia y pega entre 3 sistemas. Los reemplazamos por pipelines con IA donde haga falta y reglas deterministas donde no. Sin sobre-ingeniería.</p>
+        <div class="sd-block">
+          <h4 class="mono">Casos típicos</h4>
+          <ul>
+            <li>Clasificación y enrutado de correos</li>
+            <li>Extracción de datos de facturas/contratos</li>
+            <li>Sincronización entre CRM y ERP</li>
+            <li>Generación automática de informes</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4 class="mono">Ejemplo</h4>
+          <p class="text-faint small">Una distribuidora ahorra 32h/semana en data entry — el agente lee facturas en PDF, valida contra el ERP y solo escala las anomalías.</p>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="4">
+        <span class="mono text-faint">S/05 · 6-12 semanas · desde €28.000</span>
+        <h3>Copilots verticales</h3>
+        <p>Productos internos hechos a la medida de un equipo concreto: comercial, legal, soporte, finanzas. No es un chat genérico — habla su idioma y conoce sus datos.</p>
+        <div class="sd-block">
+          <h4 class="mono">Incluye</h4>
+          <ul>
+            <li>UX a medida (no plantilla)</li>
+            <li>SSO + permisos por rol</li>
+            <li>Integraciones con sus herramientas</li>
+            <li>Streaming UI + feedback loop</li>
+            <li>Onboarding y formación al equipo</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4 class="mono">Ejemplo</h4>
+          <p class="text-faint small">Copilot comercial para un fabricante B2B — preparación automática de visitas, propuestas y seguimiento. Adopción del 89% en 6 semanas.</p>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="5">
+        <span class="mono text-faint">S/06 · variable · €95/hora</span>
+        <h3>Integración LLM en producto</h3>
+        <p>Su producto ya existe — solo necesita capacidades de IA. Trabajamos integrados con su equipo de producto y diseño, con sprints semanales y precio por horas reales.</p>
+        <div class="sd-block">
+          <h4 class="mono">Cómo funciona</h4>
+          <ul>
+            <li>Mínimo de 80h/mes durante 3 meses</li>
+            <li>Daily con su equipo si lo desean</li>
+            <li>Acceso directo a Slack/Discord</li>
+            <li>Pull requests revisables</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="6">
+        <span class="mono text-faint">S/07 · 4-10 semanas · desde €16.000</span>
+        <h3>Visión por computador</h3>
+        <p>Detección, clasificación y extracción de información de imágenes y vídeo. Modelos open-source ajustados a su dominio cuando tiene sentido, APIs cerradas cuando no.</p>
+        <div class="sd-block">
+          <h4 class="mono">Casos típicos</h4>
+          <ul>
+            <li>Inspección de calidad en fábrica</li>
+            <li>Lectura de documentos manuscritos</li>
+            <li>Análisis de imágenes médicas (no diagnóstico)</li>
+            <li>Conteo y seguimiento en retail</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="srv-detail-card" data-detail="7">
+        <span class="mono text-faint">S/08 · retainer mensual · desde €1.800/mes</span>
+        <h3>Mantenimiento &amp; evolución</h3>
+        <p>Los modelos cambian rápido. Lo que funcionaba con GPT-4 en julio puede mejorar 3x con Claude 4.5. Nos encargamos de que su sistema no envejezca.</p>
+        <div class="sd-block">
+          <h4 class="mono">Incluye</h4>
+          <ul>
+            <li>Monitorización 24/7 (latencia, costo, drift)</li>
+            <li>Actualización a nuevos modelos cuando convenga</li>
+            <li>Tuning de prompts según evals</li>
+            <li>4-8 horas de evolución funcional al mes</li>
+            <li>Respuesta a incidencias en 4h</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>OpenAI</span><span class="dot"></span>
+    <span>Anthropic Claude</span><span class="dot"></span>
+    <span>LangGraph</span><span class="dot"></span>
+    <span>Pinecone</span><span class="dot"></span>
+    <span>Postgres + pgvector</span><span class="dot"></span>
+    <span>n8n</span><span class="dot"></span>
+    <span>Temporal</span><span class="dot"></span>
+    <span>AWS Bedrock</span><span class="dot"></span>
+    <span>Azure OpenAI</span><span class="dot"></span>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="bigcta">
+  <div class="wrap">
+    <span class="num" data-reveal>Siguiente paso</span>
+    <h2 class="display bigcta-h" data-reveal data-reveal-delay="1">
+      ¿Cuál encaja<br /><em>con su caso?</em>
+    </h2>
+    <div class="bigcta-row" data-reveal data-reveal-delay="2">
+      <a class="btn btn--accent" href="contacto.html">Cuéntenos su caso <span class="arrow">→</span></a>
+      <a class="btn" href="https://wa.me/34600000000" target="_blank" rel="noopener">Whatsapp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>UNLIMITED</h4>
+        <p class="text-faint" style="max-width:32ch">Consultora de sistemas e integración de IA. Madrid + remoto, equipo distribuido en EU.</p>
+      </div>
+      <div><h4>Web</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="mailto:hola@unlimited.systems">hola@unlimited.systems</a></li><li><a href="https://wa.me/34600000000">+34 600 00 00 00</a></li><li>Madrid · ES</li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Aviso legal</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-big" aria-hidden="true">UNLIMITED.</div>
+    <div class="footer-bottom"><span>© 2026 UNLIMITED Systems S.L.</span><span>Hecho con cabeza, no con prompts.</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="servicios.js"></script>
+
+</body>
+</html>
