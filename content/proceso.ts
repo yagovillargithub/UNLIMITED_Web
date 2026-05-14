@@ -13,12 +13,12 @@ export const fases: Fase[] = [
     week: "w1",
     label: "Discovery",
     heading: "Entendemos su negocio antes de tocar código.",
-    body: "Sentamos a su equipo durante una semana. Mapeamos procesos, identificamos cuellos de botella, separamos lo que merece IA de lo que solo necesita un buen script. Salimos con un documento de scope claro y un precio cerrado.",
+    body: "Sentamos a su equipo durante una semana. Mapeamos procesos, identificamos cuellos de botella, separamos lo que merece IA de lo que solo necesita un buen script. Salimos con un documento de scope claro y un plan cerrado.",
     rows: [
       { k: "duración", v: "5 días laborables" },
-      { k: "entregable", v: "scope.md + estimate" },
+      { k: "entregable", v: "scope.md + plan" },
       { k: "su tiempo", v: "~6 horas en total" },
-      { k: "precio", v: "€0 — al firmar", accent: true },
+      { k: "arranque", v: "Hablamos en 24h", accent: true },
     ],
   },
   {
@@ -63,11 +63,11 @@ export const fases: Fase[] = [
     week: "∞",
     label: "Mantenimiento",
     heading: "Soporte continuo, sin sorpresas.",
-    body: "Un retainer mensual mínimo cubre monitorización, actualizaciones de modelos y ajustes de prompts. Los modelos evolucionan rápido — un copilot de hace 8 meses ya está obsoleto. Estamos para que el suyo no lo esté.",
+    body: "Un acompañamiento mensual cubre monitorización, actualizaciones de modelos y ajustes de prompts. Los modelos evolucionan rápido — un copilot de hace 8 meses ya está obsoleto. Estamos para que el suyo no lo esté.",
     rows: [
       { k: "SLA", v: "4h respuesta · 24h fix" },
-      { k: "monitoring", v: "latency · costo · drift" },
-      { k: "retainer", v: "desde €1.800/mes", accent: true },
+      { k: "monitoring", v: "latencia · fiabilidad · drift" },
+      { k: "compromiso", v: "Mes a mes — sin permanencia", accent: true },
     ],
   },
 ];

@@ -11,9 +11,10 @@ const MARQUEE_ITEMS = [
   "RAG sobre datos internos",
   "Copilots verticales",
   "Automatización de procesos",
-  "Pipelines de datos",
+  "Prototipo en una semana",
   "Visión por computador",
   "Integración a medida",
+  "Código propio y mantenible",
 ];
 
 export default function HomePage() {

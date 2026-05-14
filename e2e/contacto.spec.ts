@@ -20,7 +20,7 @@ test.describe("Contacto", () => {
     await page
       .getByLabel(/Cuéntenos un poco más/)
       .fill("Tenemos 10.000 documentos legales que queremos hacer buscables con IA.");
-    await page.getByRole("radio", { name: "€10k–30k" }).click();
+    await page.getByRole("radio", { name: "Este mes" }).click();
 
     await page.getByRole("button", { name: /Enviar mensaje/i }).click();
 

@@ -16,12 +16,11 @@ const INTERESTS = [
   { val: "No estoy seguro", label: "No estoy seguro" },
 ];
 
-const BUDGETS = [
-  { val: "<10k", label: "< €10k" },
-  { val: "10-30k", label: "€10k–30k" },
-  { val: "30-80k", label: "€30k–80k" },
-  { val: ">80k", label: "> €80k" },
-  { val: "No definido", label: "No definido" },
+const TIMELINES = [
+  { val: "asap", label: "Cuanto antes" },
+  { val: "this-month", label: "Este mes" },
+  { val: "this-quarter", label: "Este trimestre" },
+  { val: "exploring", label: "Aún explorando" },
 ] as const;
 
 type Stage = "idle" | "submitting" | "success" | "error";
@@ -52,7 +51,7 @@ export function ContactForm() {
       company: "",
       interest: [],
       message: "",
-      budget: undefined,
+      timeline: undefined,
       website: "",
     },
   });
@@ -222,14 +221,14 @@ export function ContactForm() {
 
       <Controller
         control={control}
-        name="budget"
+        name="timeline"
         render={({ field }) => (
           <div className="ct-field ct-field--radio">
             <label>
-              <span className="mono">06</span> ¿Presupuesto orientativo?
+              <span className="mono">06</span> ¿Cuándo le gustaría ver algo funcionando?
             </label>
-            <div className="ct-chips" role="radiogroup" aria-label="Presupuesto">
-              {BUDGETS.map((b) => {
+            <div className="ct-chips" role="radiogroup" aria-label="Plazo deseado">
+              {TIMELINES.map((b) => {
                 const on = field.value === b.val;
                 return (
                   <button

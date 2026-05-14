@@ -1,8 +1,8 @@
 const STATS = [
-  { num: "14", suffix: "+", suffixClass: "text-accent", label: "proyectos en producción" },
-  { num: "4",  suffix: "/sem", suffixClass: "text-faint", label: "de discovery a prototipo" },
-  { num: "€0", suffix: "",  suffixClass: "",            label: "propuestas — siempre gratis" },
-  { num: "100", suffix: "%", suffixClass: "text-accent", label: "código entregado al cliente" },
+  { num: "+14", suffix: "",   suffixClass: "text-accent", label: "proyectos en producción" },
+  { num: "1",   suffix: " sem", suffixClass: "text-faint", label: "hasta el primer prototipo" },
+  { num: "24",  suffix: "h",  suffixClass: "text-accent", label: "para la primera respuesta" },
+  { num: "100", suffix: "%",  suffixClass: "text-accent", label: "código entregado al cliente" },
 ];
 
 export function Stats() {

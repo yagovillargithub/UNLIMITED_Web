@@ -2,7 +2,7 @@ export type Servicio = {
   id: string;
   num: string;
   title: string;
-  meta: { duration: string; pricing: string; price: string };
+  meta: { duration: string; format: string };
   blurb: string;
   blocks: Array<{ heading: string; kind: "list" | "text"; items?: string[]; body?: string }>;
 };
@@ -10,13 +10,14 @@ export type Servicio = {
 /**
  * 8 service offerings — used by /servicios page.
  * The order matches the prototype's S/01 → S/08 numbering.
+ * `format` indicates how the engagement is structured, not how it's billed.
  */
 export const servicios: Servicio[] = [
   {
     id: "auditoria-ia",
     num: "S/01",
     title: "Auditoría de IA",
-    meta: { duration: "1 sem", pricing: "fixed", price: "€2.400" },
+    meta: { duration: "1 semana", format: "Cerrado" },
     blurb:
       "Una semana, su equipo y nosotros. Mapeamos todos los procesos donde la IA tendría sentido (y donde no). Salimos con un informe priorizado: qué hacer primero, qué ahorra más, qué riesgos hay.",
     blocks: [
@@ -25,9 +26,9 @@ export const servicios: Servicio[] = [
         kind: "list",
         items: [
           "3 sesiones con stakeholders clave",
-          "Análisis de stack tecnológico actual",
+          "Análisis del stack tecnológico actual",
           "Informe de oportunidades priorizado",
-          "Estimación de ROI por iniciativa",
+          "Estimación de horas ahorradas por iniciativa",
           "Plan de implementación a 6 meses",
         ],
       },
@@ -42,7 +43,7 @@ export const servicios: Servicio[] = [
     id: "agentes",
     num: "S/02",
     title: "Agentes autónomos",
-    meta: { duration: "4-8 sem", pricing: "scope", price: "desde €18k" },
+    meta: { duration: "4-8 semanas", format: "Por scope" },
     blurb:
       "Asistentes que no solo responden — actúan. Se conectan a sus sistemas, ejecutan tareas, deciden cuándo escalar a un humano. Construidos para auditarse y debuggearse.",
     blocks: [
@@ -67,7 +68,7 @@ export const servicios: Servicio[] = [
     id: "rag",
     num: "S/03",
     title: "RAG sobre conocimiento interno",
-    meta: { duration: "3-6 sem", pricing: "fixed", price: "desde €14k" },
+    meta: { duration: "3-6 semanas", format: "Cerrado" },
     blurb:
       "Convertimos sus PDFs, manuales, contratos, wikis y bases de datos en un chat que responde con fuentes citadas. Evaluable, mejorable, no-alucina-y-si-lo-hace-se-detecta.",
     blocks: [
@@ -93,7 +94,7 @@ export const servicios: Servicio[] = [
     id: "automatizacion",
     num: "S/04",
     title: "Automatización de procesos",
-    meta: { duration: "2-5 sem", pricing: "scope", price: "desde €9k" },
+    meta: { duration: "2-5 semanas", format: "Por scope" },
     blurb:
       "Esos flujos donde alguien copia y pega entre 3 sistemas. Los reemplazamos por pipelines con IA donde haga falta y reglas deterministas donde no. Sin sobre-ingeniería.",
     blocks: [
@@ -105,6 +106,7 @@ export const servicios: Servicio[] = [
           "Extracción de datos de facturas/contratos",
           "Sincronización entre CRM y ERP",
           "Generación automática de informes",
+          "Recordatorios de citas, pedidos, pagos",
         ],
       },
       {
@@ -118,9 +120,9 @@ export const servicios: Servicio[] = [
     id: "copilots",
     num: "S/05",
     title: "Copilots verticales",
-    meta: { duration: "6-12 sem", pricing: "scope", price: "desde €28k" },
+    meta: { duration: "6-12 semanas", format: "Por scope" },
     blurb:
-      "Productos internos hechos a la medida de un equipo concreto: comercial, legal, soporte, finanzas. No es un chat genérico — habla su idioma y conoce sus datos.",
+      "Productos internos hechos a la medida de un equipo concreto: comercial, legal, soporte, finanzas, taller. No es un chat genérico — habla su idioma y conoce sus datos.",
     blocks: [
       {
         heading: "Incluye",
@@ -144,18 +146,18 @@ export const servicios: Servicio[] = [
     id: "integracion-llm",
     num: "S/06",
     title: "Integración LLM en producto",
-    meta: { duration: "variable", pricing: "T&M", price: "€95/h" },
+    meta: { duration: "Variable", format: "Sprint semanal" },
     blurb:
-      "Su producto ya existe — solo necesita capacidades de IA. Trabajamos integrados con su equipo de producto y diseño, con sprints semanales y precio por horas reales.",
+      "Su producto ya existe — solo necesita capacidades de IA. Trabajamos integrados con su equipo de producto y diseño, con sprints semanales y acceso directo a nosotros.",
     blocks: [
       {
         heading: "Cómo funciona",
         kind: "list",
         items: [
-          "Mínimo de 80h/mes durante 3 meses",
+          "Mínimo de 3 meses para asegurar entrega real",
           "Daily con su equipo si lo desean",
           "Acceso directo a Slack/Discord",
-          "Pull requests revisables",
+          "Pull requests revisables por su equipo técnico",
         ],
       },
     ],
@@ -164,7 +166,7 @@ export const servicios: Servicio[] = [
     id: "vision",
     num: "S/07",
     title: "Visión por computador",
-    meta: { duration: "4-10 sem", pricing: "scope", price: "desde €16k" },
+    meta: { duration: "4-10 semanas", format: "Por scope" },
     blurb:
       "Detección, clasificación y extracción de información de imágenes y vídeo. Modelos open-source ajustados a su dominio cuando tiene sentido, APIs cerradas cuando no.",
     blocks: [
@@ -172,8 +174,8 @@ export const servicios: Servicio[] = [
         heading: "Casos típicos",
         kind: "list",
         items: [
-          "Inspección de calidad en fábrica",
-          "Lectura de documentos manuscritos",
+          "Inspección de calidad en fábrica o almacén",
+          "Lectura de albaranes, tickets y documentos manuscritos",
           "Análisis de imágenes médicas (no diagnóstico)",
           "Conteo y seguimiento en retail",
         ],
@@ -184,7 +186,7 @@ export const servicios: Servicio[] = [
     id: "mantenimiento",
     num: "S/08",
     title: "Mantenimiento & evolución",
-    meta: { duration: "retainer", pricing: "mensual", price: "desde €1.800/m" },
+    meta: { duration: "Retainer", format: "Mes a mes" },
     blurb:
       "Los modelos cambian rápido. Lo que funcionaba con GPT-4 en julio puede mejorar 3x con Claude 4.5. Nos encargamos de que su sistema no envejezca.",
     blocks: [
@@ -192,10 +194,10 @@ export const servicios: Servicio[] = [
         heading: "Incluye",
         kind: "list",
         items: [
-          "Monitorización 24/7 (latencia, costo, drift)",
+          "Monitorización 24/7 (latencia, fiabilidad, drift)",
           "Actualización a nuevos modelos cuando convenga",
           "Tuning de prompts según evals",
-          "4-8 horas de evolución funcional al mes",
+          "Horas de evolución funcional cada mes",
           "Respuesta a incidencias en 4h",
         ],
       },

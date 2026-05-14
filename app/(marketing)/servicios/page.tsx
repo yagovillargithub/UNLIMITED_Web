@@ -6,11 +6,11 @@ import { ServiciosList } from "@/components/servicios-list";
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Catálogo abierto, precios cerrados. 8 servicios de IA — desde auditorías de €2.400 hasta copilots verticales — con tiempos y precio orientativo.",
+    "Catálogo abierto, tiempos cerrados. 8 servicios de IA — desde auditorías de una semana hasta copilots verticales — pensados para PYMEs que quieren ver resultados rápido.",
   openGraph: {
     title: "Servicios — UNLIMITED",
     description:
-      "Catálogo abierto, precios cerrados. 8 servicios de IA con tiempos y precio orientativo.",
+      "Catálogo abierto, tiempos cerrados. 8 servicios de IA con plazos claros y entregables tangibles.",
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ export default function ServiciosPage() {
           </span>
           <h1 className="display srv-hero-h" data-reveal data-reveal-delay="1">
             Catálogo abierto.<br />
-            <em>Precios cerrados.</em>
+            <em>Tiempos cerrados.</em>
           </h1>
           <p
             className="lede"

@@ -24,8 +24,8 @@ export const contactSchema = z.object({
     .trim()
     .min(20, "Cuéntenos un poco más (mín. 20 caracteres).")
     .max(1000, "Máximo 1.000 caracteres."),
-  budget: z
-    .enum(["<10k", "10-30k", "30-80k", ">80k", "No definido", ""])
+  timeline: z
+    .enum(["asap", "this-month", "this-quarter", "exploring", ""])
     .optional()
     .transform((v) => (v === "" ? undefined : v)),
   /** Honeypot — must stay empty. Real users never see this field. */
@@ -33,3 +33,27 @@ export const contactSchema = z.object({
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;
+
+export const TIMELINE_LABELS: Record<NonNullable<ContactInput["timeline"]>, string> = {
+  "asap": "Cuanto antes",
+  "this-month": "Este mes",
+  "this-quarter": "Este trimestre",
+  "exploring": "Aún explorando",
+};
+
+/* ─────────────────────────────────────────────────────────────
+ * Tweaks feedback — submitted from the floating Tweaks panel
+ * when the user hits "Me gusta esta configuración".
+ * Keeps the shape loose (we only validate types) because the
+ * Tweaks schema evolves faster than this API.
+ * ───────────────────────────────────────────────────────────── */
+export const tweaksFeedbackSchema = z.object({
+  name: z.string().trim().max(80).optional().default(""),
+  note: z.string().trim().max(500).optional().default(""),
+  state: z.record(z.union([z.string(), z.boolean(), z.number()])),
+  url: z.string().trim().max(500).optional().default(""),
+  /** Honeypot. */
+  website: z.string().max(0, "Bot detectado.").optional().default(""),
+});
+
+export type TweaksFeedbackInput = z.infer<typeof tweaksFeedbackSchema>;

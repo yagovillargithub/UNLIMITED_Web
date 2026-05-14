@@ -23,9 +23,10 @@ export function Hero() {
 
         <div className="hero-side" data-reveal data-reveal-delay="2">
           <p className="lede">
-            Somos UNLIMITED. Diseñamos, integramos y desplegamos inteligencia
-            artificial dentro de empresas reales — no demos. Cercanos, claros,
-            con código que funciona el lunes por la mañana.
+            Somos UNLIMITED. Llevamos IA práctica a empresas reales — talleres,
+            hostelería, clínicas, despachos, ganaderías, almacenes — y en pocas
+            semanas tiene un sistema que le ahorra horas cada día. Código propio
+            que funciona el lunes por la mañana.
           </p>
           <div className="hero-cta">
             <Link className="btn btn--accent" href="/contacto">
@@ -42,12 +43,13 @@ export function Hero() {
             <div className="orbit-ring r1" />
             <div className="orbit-ring r2" />
             <div className="orbit-ring r3" />
+            <div className="orbit-pulse" />
             <div className="orbit-core" />
-            <div className="orbit-node n1"><span className="mono">LLM</span></div>
-            <div className="orbit-node n2"><span className="mono">RAG</span></div>
-            <div className="orbit-node n3"><span className="mono">API</span></div>
-            <div className="orbit-node n4"><span className="mono">DATA</span></div>
-            <div className="orbit-node n5"><span className="mono">UX</span></div>
+            <div className="orbit-node n1"><span className="mono">Pedidos</span></div>
+            <div className="orbit-node n2"><span className="mono">Agenda</span></div>
+            <div className="orbit-node n3"><span className="mono">Facturas</span></div>
+            <div className="orbit-node n4"><span className="mono">Stock</span></div>
+            <div className="orbit-node n5"><span className="mono">Clientes</span></div>
           </div>
         </div>
 

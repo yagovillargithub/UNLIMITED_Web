@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { contactSchema } from "@/lib/schemas";
+import { contactSchema, TIMELINE_LABELS } from "@/lib/schemas";
 import { getLimiter } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
@@ -33,15 +33,18 @@ function buildEmail(data: {
   company: string;
   interest: string[];
   message: string;
-  budget?: string;
+  timeline?: string;
   ref: string;
 }) {
+  const timelineLabel = data.timeline
+    ? TIMELINE_LABELS[data.timeline as keyof typeof TIMELINE_LABELS] ?? data.timeline
+    : "—";
   const rows: Array<[string, string]> = [
     ["Nombre", data.name],
     ["Email", data.email],
     ["Empresa", data.company],
     ["Interés", data.interest.join(", ")],
-    ["Presupuesto", data.budget ?? "—"],
+    ["Plazo deseado", timelineLabel],
     ["Ref", data.ref],
   ];
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n") + `\n\n---\n${data.message}\n`;
@@ -162,7 +165,7 @@ export async function POST(req: Request) {
           text: { type: "mrkdwn", text: `*${data.name}* · ${data.company}\n${data.email}` },
         },
         { type: "section", text: { type: "mrkdwn", text: `*Interés:* ${data.interest.join(", ")}` } },
-        { type: "section", text: { type: "mrkdwn", text: `*Presupuesto:* ${data.budget ?? "—"}` } },
+        { type: "section", text: { type: "mrkdwn", text: `*Plazo:* ${data.timeline ? TIMELINE_LABELS[data.timeline as keyof typeof TIMELINE_LABELS] ?? data.timeline : "—"}` } },
         { type: "section", text: { type: "mrkdwn", text: data.message } },
         { type: "context", elements: [{ type: "mrkdwn", text: `Ref ${ref}` }] },
       ],

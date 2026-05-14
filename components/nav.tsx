@@ -28,7 +28,9 @@ export function Nav() {
         ))}
       </ul>
       <Link href="/contacto" className="nav-cta">
-        Hablemos →
+        <span className="nav-cta-dot" aria-hidden="true" />
+        <span>Hablemos</span>
+        <span className="nav-cta-arrow" aria-hidden="true">→</span>
       </Link>
     </nav>
   );

@@ -28,10 +28,9 @@ export function ServiciosList() {
               <div className="srv-row-num mono">{s.num}</div>
               <div className="srv-row-title">{s.title}</div>
               <div className="srv-row-tags mono">
-                <span>{s.meta.duration}</span>
-                <span>{s.meta.pricing}</span>
+                <span>{s.meta.format}</span>
               </div>
-              <div className="srv-row-price mono">{s.meta.price}</div>
+              <div className="srv-row-price mono">{s.meta.duration}</div>
             </button>
           ))}
         </div>
@@ -48,7 +47,7 @@ export function ServiciosList() {
               hidden={active !== i}
             >
               <span className="mono text-faint">
-                {s.num} · {s.meta.duration} · {s.meta.price}
+                {s.num} · {s.meta.duration} · {s.meta.format}
               </span>
               <h3>{s.title}</h3>
               <p>{s.blurb}</p>

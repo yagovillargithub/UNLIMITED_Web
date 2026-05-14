@@ -27,13 +27,29 @@ export function RevealController() {
           const text = node.textContent ?? "";
           if (!text) return;
           const frag = document.createDocumentFragment();
-          for (const ch of text) {
-            const sp = document.createElement("span");
-            sp.className = "ch";
-            sp.style.transitionDelay = `${i * 0.018}s`;
-            i++;
-            sp.textContent = ch === " " ? " " : ch;
-            frag.appendChild(sp);
+          // Split by whitespace so the line wrapper breaks at word boundaries.
+          // Each word becomes <span class="word">...<span class="ch">c</span>...</span>
+          // and the literal space stays as a text node between words. Without
+          // this, every char is an inline-block and the browser may wrap mid-word
+          // (you'd see "Sistemasq uepiensan contigo" on narrow viewports).
+          const parts = text.split(/(\s+)/);
+          for (const part of parts) {
+            if (part === "") continue;
+            if (/^\s+$/.test(part)) {
+              frag.appendChild(document.createTextNode(part));
+              continue;
+            }
+            const wordEl = document.createElement("span");
+            wordEl.className = "word";
+            for (const ch of part) {
+              const sp = document.createElement("span");
+              sp.className = "ch";
+              sp.style.transitionDelay = `${i * 0.018}s`;
+              i++;
+              sp.textContent = ch;
+              wordEl.appendChild(sp);
+            }
+            frag.appendChild(wordEl);
           }
           node.parentNode?.replaceChild(frag, node);
         } else if (node.nodeType === Node.ELEMENT_NODE) {
